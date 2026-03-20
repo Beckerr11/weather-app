@@ -2,6 +2,10 @@
 
 Vanilla JavaScript weather dashboard with city search and short forecast data.
 
+## Live demo
+
+https://weather-app-snowy-gamma-65.vercel.app
+
 ## Overview
 
 This project focuses on:
