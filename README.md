@@ -1,18 +1,27 @@
-# 🌦️ Weather App
+# Weather App
 
-Aplicação que mostra o clima de uma cidade utilizando API.
+Vanilla JavaScript weather dashboard with city search and short forecast data.
 
-## Tecnologias
+## Overview
+
+This project focuses on:
+
+- geocoding a city before requesting forecast data
+- rendering current temperature and upcoming daily ranges
+- handling empty, loading, success, and error states
+- keeping the implementation small and easy to inspect
+
+## Stack
 
 - HTML
 - CSS
 - JavaScript
-- Weather API
+- Open-Meteo APIs
 
-## Como usar
+## Local usage
 
-Digite o nome da cidade e clique em buscar.
+Open `index.html` in the browser, or serve the folder with any static server.
 
-## Autor
+## Author
 
-Douglas Aparecido da Silva
+Douglas Aparecido Silva

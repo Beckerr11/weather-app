@@ -1,28 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <meta
+      name="description"
+      content="Weather dashboard built with vanilla JavaScript using geocoding and forecast APIs."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23dbeafe'/%3E%3Ccircle cx='24' cy='26' r='12' fill='%23f59e0b'/%3E%3Cpath d='M22 42c0-6.63 5.37-12 12-12 5.2 0 9.62 3.31 11.25 7.94A8 8 0 0 1 43 54H24a8 8 0 0 1-2-15.97V42Z' fill='%231d4ed8'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Fira+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero-card">
+        <div>
+          <span class="eyebrow">Forecast dashboard</span>
+          <h1>Search a city and get a compact, readable weather snapshot.</h1>
+          <p>
+            This version focuses on cleaner data presentation, better states, and a
+            more product-like weather experience with no framework overhead.
+          </p>
+        </div>
 
-<head>
+        <form id="weather-form" class="search-form" novalidate>
+          <label class="sr-only" for="city">City</label>
+          <input id="city" name="city" placeholder="Type a city name" autocomplete="off" />
+          <button type="submit">Get forecast</button>
+        </form>
 
-<meta charset="UTF-8">
+        <div class="quick-searches">
+          <button type="button" class="ghost-chip" data-city="Sao Paulo">Sao Paulo</button>
+          <button type="button" class="ghost-chip" data-city="New York">New York</button>
+          <button type="button" class="ghost-chip" data-city="Tokyo">Tokyo</button>
+        </div>
 
-<title>Weather App</title>
+        <p id="weather-feedback" class="feedback-text" role="status">
+          Try a city to load current weather and a short forecast.
+        </p>
+      </header>
 
-<link rel="stylesheet" href="style.css">
+      <main class="dashboard-grid">
+        <section id="weather-panel" class="weather-panel" aria-live="polite">
+          <div class="empty-state">
+            <span class="state-chip">Ready</span>
+            <h2>No city selected yet</h2>
+            <p>Search for a city to load current temperature, conditions, and the next forecast steps.</p>
+          </div>
+        </section>
 
-</head>
+        <aside class="info-column">
+          <article class="info-card">
+            <span class="state-chip">What changed</span>
+            <ul>
+              <li>city geocoding before forecast request</li>
+              <li>clear error handling</li>
+              <li>current weather plus next three days</li>
+            </ul>
+          </article>
 
-<body>
+          <article class="info-card">
+            <span class="state-chip">Stack</span>
+            <p>HTML, CSS, JavaScript, Open-Meteo geocoding, and forecast APIs.</p>
+          </article>
+        </aside>
+      </main>
+    </div>
 
-<h1>Clima</h1>
-
-<input id="cidade" placeholder="Digite a cidade">
-
-<button onclick="buscarClima()">Buscar</button>
-
-<div id="resultado"></div>
-
-<script src="script.js"></script>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
