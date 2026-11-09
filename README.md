@@ -28,4 +28,4 @@ Open `index.html` in the browser, or serve the folder with any static server.
 
 ## Author
 
-Douglas Aparecido Silva
+Becker
